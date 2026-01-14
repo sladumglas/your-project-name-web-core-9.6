@@ -1,11 +1,341 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WebCore</title>
 </head>
-<body>
-    
+<body class="page">
+    <div class="layout">
+        <aside class="side-menu" id="sideMenu" aria-label="Меню сайта">
+            <div class="side-menu__header">
+                <button class="icon-btn icon-btn--pink side-menu__close" type="button"
+                aria-label="Закрыть меню" data-menu-close>
+                <img src="./image/icon/burgerclose.svg" alt="" class="icon" aria-hidden="true"/>
+                </button>
+
+                <a class="side-menu__logo-link" href="#" aria-label="На главную">
+                    <img src="./image/Logo.svg" alt="CPS" class="side-menu__logo"/>
+                </a>
+
+                <button class="icon-btn icon-btn--pink side-menu__search" type="button" aria-label="Поиск">
+                    <img src="./image/icon/search.svg" alt="" class="icon" aria-hidden="true"/>
+                </button>
+            </div>
+
+            <nav class="side-menu__nav" aria-label="Разделы сайта">
+                <a class="side-menu__link side-menu__link--active" href="#">Ремонт техники</a>
+                <a class="side-menu__link" href="#">Услуги и сервисы</a>
+                <a class="side-menu__link" href="#">Корпоративным клиентам</a>
+                <a class="side-menu__link" href="#">Продавцам техники</a>
+                <a class="side-menu__link" href="#">Партнёрам</a>
+                <a class="side-menu__link" href="#">Производителям</a>
+                <a class="side-menu__link" href="#">Наши сервисные центры</a>
+                <a class="side-menu__link" href="#">Контакты</a>
+            </nav>
+
+    <div class="side-menu__footer">
+        <div class="side-menu__actions" aria-label="Контакты">
+            <button class="icon-btn icon-btn--pink" type="button" aria-label="Позвонить">
+                <img src="./image/icon/call.svg" alt="" class="icon" aria-hidden="true"/>
+            </button>
+
+            <button class="icon-btn icon-btn--pink" type="button" aria-label="Чат">
+                <img src="./image/icon/chat.svg" alt="" class="icon" aria-hidden="true"/>
+            </button>
+
+            <button class="icon-btn icon-btn--pink" type="button" aria-label="Профиль">
+                <img src="./image/icon/profile.svg" alt="" class="icon" aria-hidden="true"/>
+            </button>
+        </div>
+
+        <a class="side-menu__email" href="mailto:mail@cps.com">mail@cps.com</a>
+        <a class="side-menu__phone" href="tel:88008908900">8 800 890-89-00</a>
+
+        <div class="side-menu__lang" aria-label="Язык">
+          <a class="side-menu__lang-link side-menu__lang-link--active" href="#">RU</a>
+          <a class="side-menu__lang-link" href="#">EN</a>
+          <a class="side-menu__lang-link" href="#">CH</a>
+        </div>
+    </div>
+        </aside>
+
+    <div class="layout__overlay" data-menu-overlay></div>
+    <div class="layout__content">
+        <header class="header">
+            <div class="container header__inner">
+                <button class="icon-btn icon-btn--pink header__burger" type="button"
+                aria-label="Открыть меню" aria-controls="sideMenu" aria-expanded="false" data-menu-open>
+                <img src="./image/icon/menu.svg" alt="" class="icon" aria-hidden="true"/>
+                </button>
+
+                <a href="#" class="header__logo-link" aria-label="На главную">
+                <img src="./image/Logo.svg" alt="CPS" class="header__logo"/></a>
+
+                <span class="header__divider" aria-hidden="true"></span>
+
+            <div class="header__contacts" aria-label="Контакты">
+              <button class="icon-btn icon-btn--pink" type="button" aria-label="Позвонить">
+                <img src="./image/icon/call.svg" alt="" class="icon" aria-hidden="true" />
+              </button>
+              <button class="icon-btn icon-btn--pink" type="button" aria-label="Чат">
+                <img src="./image/icon/chat.svg" alt="" class="icon" aria-hidden="true" />
+              </button>
+              <button class="icon-btn icon-btn--pink" type="button" aria-label="Профиль">
+                <img src="./image/icon/profile.svg" alt="" class="icon" aria-hidden="true" />
+              </button>
+            </div>
+
+            <span class="header__divider header__divider--tablet" aria-hidden="true"></span>
+
+            <div class="header__actions" aria-label="Действия">
+              <button class="icon-btn icon-btn--pink" type="button" aria-label="Оставить заявку">
+                <img src="./image/icon/repair.svg" alt="" class="icon" aria-hidden="true" />
+              </button>
+              <button class="icon-btn icon-btn--pink" type="button" aria-label="Статус ремонта">
+                <img
+                  src="./image/icon/checkstatus.svg" alt="" class="icon" aria-hidden="true"
+                />
+              </button>
+             </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="services">
+                <div class="container">
+                    <div class="services__head">
+                        <span class="services__bar" aria-hidden="true"></span>
+
+                        <div class="services__top">
+                            <h1 class="services__title">Услуги и сервисы</h1>
+                           <div class="services__actions" aria-label="Actions">
+                            <button class="services__action" type="button" aria-label="Оставить заявку">
+                                <span class="services__action-text">Оставить заявку</span>
+                                <span class="icon-btn icon-btn--pink" aria-hidden="true">
+                                    <img src="./image/icon/repair.svg" alt="" class="icon" aria-hidden="true"/>
+                                </span>
+                            </button>
+
+                            <button class="services__action" type="button" aria-label="Статус ремонта">
+                                <span class="services__action-text">Статус ремонта</span>
+                                <span class="icon-btn icon-btn--pink" aria-hidden="true">
+                                    <img src="./image/icon/checkstatus.svg" alt="" class="icon" aria-hidden="true"/>
+                                </span>
+                            </button>
+                          </div>
+                        </div>
+                    </div>
+
+              <nav class="services__tabs" aria-label="Service categories">
+                <a class="services__tab services__tab--active" href="#">Ремонтируемые бренды</a>
+                <a class="services__tab" href="#">Ремонтируемые устройства</a>
+                <a class="services__tab" href="#">Цены на услуги</a>
+                <a class="services__tab" href="#">Адреса сервисных центров</a>
+                <a class="services__tab" href="#">Специальные цены</a>
+                <a class="services__tab" href="#">Отзывы</a>
+              </nav>
+
+              <div class="services__content">
+                <div class="services__info">
+                  <p class="services__text">
+                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у
+                    нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией
+                    производителя.
+                  </p>
+
+                  <p class="services__text services__text--second">
+                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
+                  </p>
+
+                  <p class="services__text services__text--desktop">
+                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что
+                    подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам
+                    обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                  </p>
+
+                  <button class="services__more" type="button">
+                    <img src="./image/expand-down.svg" alt="" class="services__more-icon" 
+                    aria-hidden="true"/>
+                    <span class="services__more-text">Читать дальше</span>
+                  </button>
+                </div>
+             <div class="services__image">
+                <picture>
+                    <source srcset="./image/frame3.svg" media="(min-width: 1120px)"/>
+                    <source srcset="./image/frame2.svg" media="(min-width: 768px)"/>
+                    <img src="./image/frame1.png" alt="Сервисный центр" class="services__img"/>
+                </picture>
+            </div>
+            </div>
+            </div>
+            </section>
+
+            <section class="brands">
+            <header class="section-head">
+              <div class="container">
+                <h2 class="section-head__title">Ремонт техники различных брендов</h2>
+              </div>
+            </header>
+
+            <div class="container">
+              <div class="brands__slider swiper" data-slider="brands">
+                <div class="swiper-wrapper brands__list">
+
+                  <a class="brands__card swiper-slide" href="#">
+                    <img class="brands__logo" src="./image/brands/lenovo.svg" alt="Lenovo" />
+                    <img class="brands__arrow" src="./image/icon/go.svg" alt="" aria-hidden="true" />
+                  </a>
+
+                  <a class="brands__card swiper-slide" href="#">
+                    <img class="brands__logo" src="./image/brands/samsung.svg" alt="Samsung" />
+                    <img class="brands__arrow" src="./image/icon/go.svg" alt="" aria-hidden="true" />
+                  </a>
+
+                  <a class="brands__card swiper-slide" href="#">
+                    <img class="brands__logo" src="./image/brands/apple.svg" alt="Apple" />
+                    <img class="brands__arrow" src="./image/icon/go.svg" alt="" aria-hidden="true" />
+                  </a>
+
+                  <a class="brands__card swiper-slide" href="#">
+                    <img class="brands__logo" src="./image/brands/bosch.svg" alt="Bosch" />
+                    <img class="brands__arrow" src="./image/icon/go.svg" alt="" aria-hidden="true" />
+                  </a>
+
+                  <a class="brands__card swiper-slide" href="#">
+                    <img class="brands__logo" src="./image/brands/hp.svg" alt="HP" />
+                    <img class="brands__arrow" src="./image/icon/go.svg" alt="" aria-hidden="true" />
+                  </a>
+
+                  <a class="brands__card swiper-slide" href="#">
+                    <img class="brands__logo" src="./image/brands/acer.svg" alt="Acer" />
+                    <img class="brands__arrow" src="./image/icon/go.svg" alt="" aria-hidden="true" />
+                  </a>
+
+                  <a class="brands__card swiper-slide" href="#">
+                    <img class="brands__logo" src="./image/brands/sony.svg" alt="Sony" />
+                    <img class="brands__arrow" src="./image/icon/go.svg" alt="" aria-hidden="true" />
+                  </a>
+
+                  <a class="brands__card swiper-slide" href="#">
+                    <img class="brands__logo" src="./image/brands/lenovo.svg" alt="Lenovo" />
+                    <img class="brands__arrow" src="./image/icon/go.svg" alt="" aria-hidden="true" />
+                  </a>
+                </div>
+
+                <div class="swiper-pagination brands__pagination"></div>
+              </div>
+
+              <button class="brands__toggle" type="button" data-brands-toggle>
+                <img class="brands__toggle-icon" src="./image/expand-down.svg" alt="" aria-hidden="true"/>
+                <span class="brands__toggle-text">Показать все</span>
+              </button>
+            </div>
+          </section>
+
+          <section class="devices">
+            <header class="section-head">
+              <div class="container">
+                <h2 class="section-head__title">Ремонт различных видов техники</h2>
+              </div>
+            </header>
+
+            <div class="container">
+              <div class="devices__slider swiper" data-slider="devices">
+                <div class="swiper-wrapper devices__list">
+                  <a class="devices__card swiper-slide" href="#">
+                    <span class="devices__text">Ремонт ноутбуков</span>
+                    <img class="devices__arrow" src="./image/icon/go.svg" alt="" aria-hidden="true" />
+                  </a>
+
+                  <a class="devices__card swiper-slide" href="#">
+                    <span class="devices__text">Ремонт планшетов</span>
+                    <img class="devices__arrow" src="./image/icon/go.svg" alt="" aria-hidden="true" />
+                  </a>
+
+                  <a class="devices__card swiper-slide" href="#">
+                    <span class="devices__text">Ремонт ПК</span>
+                    <img class="devices__arrow" src="./image/icon/go.svg" alt="" aria-hidden="true" />
+                  </a>
+                </div>
+
+                <div class="swiper-pagination devices__pagination"></div>
+              </div>
+
+              <button class="devices__toggle" type="button" data-devices-toggle>
+                <img class="devices__toggle-icon" src="./image/expand-down.svg" alt="" aria-hidden="true"/>
+                <span class="devices__toggle-text">Показать все</span>
+              </button>
+            </div>
+          </section>
+
+            <section class="prices">
+            <header class="section-head">
+              <div class="container">
+                <h2 class="section-head__title">Цены на услуги</h2>
+              </div>
+            </header>
+
+            <div class="container">
+              <div class="prices__table" role="table" aria-label="Прайс-лист">
+                <div class="prices__row prices__row--head" role="row">
+                  <div class="prices__cell prices__cell--service" role="columnheader">
+                    Ремонтные услуги
+                  </div>
+                  <div class="prices__cell prices__cell--price" role="columnheader">Цена</div>
+                  <div class="prices__cell prices__cell--time" role="columnheader">Срок</div>
+                  <div class="prices__cell prices__cell--action" role="columnheader"></div>
+                </div>
+
+                <div class="prices__row" role="row">
+                  <div class="prices__cell prices__cell--service" role="cell">Диагностика</div>
+                  <div class="prices__cell prices__cell--price" role="cell">Бесплатно</div>
+                  <div class="prices__cell prices__cell--time" role="cell">30 мин</div>
+                  <div class="prices__cell prices__cell--action" role="cell">
+                    <button class="prices__order" type="button">
+                      Заказать
+                      <img class="prices__order-icon"
+                        src="./image/Group10.svg" alt=""  aria-hidden="true"/>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="prices__row" role="row">
+                  <div class="prices__cell prices__cell--service" role="cell">Замена дисплея</div>
+                  <div class="prices__cell prices__cell--price" role="cell">1000 ₽</div>
+                  <div class="prices__cell prices__cell--time" role="cell">30-120 мин</div>
+                  <div class="prices__cell prices__cell--action" role="cell">
+                    <button class="prices__order" type="button">
+                      Заказать
+                      <img class="prices__order-icon" src="./image/Group10.svg" alt="" aria-hidden="true"/>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <p class="prices__note">
+                Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для
+                получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
+              </p>
+
+              <a class="prices__offer" href="#">
+                Получить коммерческое предложение
+                <img class="prices__offer-icon" src="./image/more.png" alt="" aria-hidden="true"/>
+              </a>
+            </div>
+          </section>
+        </main>
+
+        <footer class="footer">
+          <div class="container footer__inner">
+            <p class="footer__text">© 2019 CPS<br />Разработано командой Apesong</p>
+            <a class="footer__link" href="#">Политика конфиденциальности</a>
+            <p class="footer__text footer__text--right">
+              Информация, размещенная на данной странице, не является публичной офертой
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
 </body>
 </html>
