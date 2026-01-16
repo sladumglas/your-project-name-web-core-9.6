@@ -1,1 +1,82 @@
-.devices {}
+@use "../variables" as *;
+
+.devices {
+  padding-bottom: 24px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__slider {
+    padding: 16px 0;
+  }
+
+  &__card {
+    height: 160px;
+    padding: 16px;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__text {
+    font-weight: 500;
+  }
+
+  &__toggle {
+    margin-top: 8px;
+    border: 0;
+    background: transparent;
+    padding: 8px 0;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__pagination {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: $bp-tablet) {
+    &__slider {
+      overflow: visible;
+    }
+
+    &__list {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+
+      max-height: 336px;
+      overflow: hidden;
+
+      &--expanded {
+        max-height: none;
+      }
+    }
+
+    &__card {
+      width: auto !important;
+    }
+
+    &__pagination {
+      display: none;
+    }
+
+    &__toggle {
+      display: inline-flex;
+    }
+  }
+
+  @media (min-width: 1120px) {
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

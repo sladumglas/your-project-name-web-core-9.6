@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 .section-head {
   border-top: 1px solid $color-accent;
   background: linear-gradient(90deg, $color-bg 0%, $color-white 100%);

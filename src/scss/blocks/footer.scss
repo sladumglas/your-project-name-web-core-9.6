@@ -1,1 +1,36 @@
-.footer {}
+@use "../variables" as *;
+
+.footer {
+  border-top: 1px solid $color-border;
+  padding: 16px 0;
+
+  &__inner {
+    display: grid;
+    gap: 16px;
+    color: $color-muted;
+    font-size: 14px;
+
+    @media (min-width: $bp-tablet) {
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: start;
+    }
+  }
+
+  &__link {
+    color: $color-muted;
+
+    @media (min-width: $bp-tablet) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    &--right {
+      @media (min-width: $bp-tablet) {
+        text-align: right;
+      }
+    }
+  }
+}

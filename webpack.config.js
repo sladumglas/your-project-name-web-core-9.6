@@ -17,8 +17,20 @@ module.exports = {
     open: true,
     hot: true,
   },
-  module: {
+
+   module: {
     rules: [
+      // ✅ CSS (Swiper и любые .css)
+      {
+        test: /\.css$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
+        ],
+      },
+
+      // ✅ SCSS
       {
         test: /\.scss$/i,
         use: [
@@ -30,6 +42,7 @@ module.exports = {
       },
     ],
   },
+  
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
