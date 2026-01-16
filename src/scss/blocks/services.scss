@@ -1,0 +1,137 @@
+.services {
+  &__head {
+    position: relative;
+    padding-top: 24px;
+  }
+
+  &__bar {
+    position: absolute;
+    left: -$container-padding-m;
+    top: 24px;
+    width: 4px;
+    height: 40px;
+    border-radius: 0 4px 4px 0;
+    background: $color-accent;
+
+    @media (min-width: $bp-tablet) {
+      left: -$container-padding-t;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+  }
+
+  &__actions {
+    display: none;
+    margin-left: auto;
+    gap: 16px;
+
+    @media (min-width: $bp-desktop) {
+      display: flex;
+    }
+  }
+
+  &__action {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  &__action-text {
+    font-weight: 500;
+  }
+
+  &__tabs {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  &__tab {
+    white-space: nowrap;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    color: $color-muted;
+
+    &--active {
+      background: $color-white;
+      border-color: $color-accent;
+      color: $color-text;
+    }
+  }
+
+  &__content {
+    margin-top: 16px;
+
+    @media (min-width: $bp-tablet) {
+      display: flex;
+      gap: 48px;
+    }
+  }
+
+  &__info {
+    @media (min-width: $bp-tablet) {
+      flex: 1;
+    }
+  }
+
+  &__text {
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 18px;
+
+    &--desktop {
+      display: none;
+
+      @media (min-width: 1120px) {
+        display: block;
+      }
+    }
+  }
+
+  &__more {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+  }
+
+  &__image {
+    margin: 16px (-$container-padding-m) 0;
+
+    @media (min-width: $bp-tablet) {
+      margin: 0;
+      flex: 1;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: $radius;
+
+    @media (min-width: $bp-tablet) {
+      border-radius: 10px;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.side-menu {
+  width: $menu-width;
+  background: $color-white;
+  height: 100vh;
+  overflow: auto;
+  border-right: 1px solid $color-border;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-110%);
+  transition: transform $transition;
+
+  @media (min-width: $bp-tablet) and (max-width: ($bp-desktop - 1)) {
+    box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
+  }
+
+  @media (min-width: $bp-desktop) {
+    position: sticky;
+    top: 0;
+    transform: none;
+    box-shadow: none;
+  }
+
+  &__header {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__logo {
+    height: 52px;
+    width: auto;
+  }
+
+  &__search {
+    margin-left: auto;
+  }
+
+  &__close {
+    @media (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    padding: 12px 16px;
+    position: relative;
+
+    &--active {
+      color: $color-muted;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 32px;
+        border-radius: 0 4px 4px 0;
+        background: $color-accent;
+      }
+    }
+  }
+
+  &__footer {
+    padding: 16px;
+    display: grid;
+    gap: 12px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__email {
+    font-weight: 500;
+  }
+
+  &__phone {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__lang {
+    display: flex;
+    gap: 8px;
+    padding-top: 8px;
+  }
+
+  &__lang-link {
+    font-weight: 500;
+    color: $color-text;
+
+    &--active {
+      color: $color-muted;
+    }
+  }
+}
+
+.page--menu-open {
+  .side-menu {
+    @media (max-width: ($bp-desktop - 1)) {
+      transform: translateX(0);
+    }
+  }
+}

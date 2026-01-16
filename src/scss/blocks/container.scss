@@ -1,0 +1,7 @@
+.container {
+  padding: 0 $container-padding-m;
+
+  @media (min-width: $bp-tablet) {
+    padding: 0 $container-padding-t;
+  }
+}

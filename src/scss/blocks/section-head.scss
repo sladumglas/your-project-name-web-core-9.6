@@ -1,0 +1,14 @@
+.section-head {
+  border-top: 1px solid $color-accent;
+  background: linear-gradient(90deg, $color-bg 0%, $color-white 100%);
+
+  &__title {
+    margin: 0;
+    padding: 16px 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-muted;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;
+  }
+}

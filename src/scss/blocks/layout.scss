@@ -1,0 +1,45 @@
+.layout {
+  position: relative;
+
+  @media (min-width: $bp-desktop) {
+    max-width: $bp-wide;
+    margin: 0 auto;
+    display: flex;
+    min-height: 100vh;
+  }
+
+  &__content {
+    min-width: 0;
+
+    @media (min-width: $bp-desktop) {
+      flex: 1;
+      background: $color-bg;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $transition;
+    z-index: 900;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    @media (min-width: $bp-tablet) and (max-width: ($bp-desktop - 1)) {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    @media (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+}
+
+.page--menu-open {
+  .layout__overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
