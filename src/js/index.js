@@ -1,5 +1,3 @@
-// 1) Сначала подключаем CSS Swiper, потом наш main.scss —
-// тогда наши стили будут перекрывать swiper.css, а не наоборот.
 require("swiper/css");
 require("swiper/css/pagination");
 

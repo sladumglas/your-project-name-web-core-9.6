@@ -5,7 +5,7 @@
 
   &__slider {
     padding: 16px 0;
-    overflow: visible;
+    overflow: hidden; // <-- важно для мобилки
   }
 
   &__card {
@@ -24,21 +24,17 @@
     color: inherit;
 
     @media (max-width: 767px) {
-      width: 240px;
+      width: 240px !important; // <-- перебиваем swiper-slide width:100%
       flex: 0 0 auto;
     }
-  }
-
-  &__card.swiper-slide {
-    display: flex;
   }
 
   &__logo {
     display: block;
     max-width: 128px;
     max-height: 40px;
-    height: auto;
     width: auto;
+    height: auto;
     object-fit: contain;
   }
 
@@ -55,6 +51,7 @@
     background: transparent;
     padding: 8px 0;
     cursor: pointer;
+
     display: none;
     align-items: center;
     gap: 8px;
@@ -69,6 +66,7 @@
   @media (min-width: $bp-tablet) {
     &__slider {
       padding: 24px 0;
+      overflow: visible;
     }
 
     &__list {
@@ -84,10 +82,6 @@
       max-height: none;
     }
 
-    &__card {
-      width: auto !important;
-    }
-
     &__pagination {
       display: none;
     }
@@ -97,7 +91,7 @@
     }
   }
 
-  @media (min-width: 1120px) {
+  @media (min-width: $bp-desktop) {
     &__list {
       grid-template-columns: repeat(4, 1fr);
     }

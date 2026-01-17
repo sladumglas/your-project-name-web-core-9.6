@@ -1,14 +1,22 @@
 @use "./variables" as *;
 @use "./fonts";
 @use "./base";
+
+// утилиты/общие
 @use "./blocks/container";
 @use "./blocks/icon-btn";
+
+// каркас/обвязка страницы
 @use "./blocks/layout";
-@use "./blocks/side-menu";
 @use "./blocks/header";
+@use "./blocks/side-menu";
+
+// общие секционные элементы
 @use "./blocks/section-head";
+@use "./blocks/footer";
+
+// контентные блоки
 @use "./blocks/services";
 @use "./blocks/brands";
 @use "./blocks/devices";
 @use "./blocks/prices";
-@use "./blocks/footer";

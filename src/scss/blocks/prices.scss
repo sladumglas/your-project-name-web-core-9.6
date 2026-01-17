@@ -3,36 +3,27 @@
 .prices {
   padding-bottom: 24px;
 
-  &__slider {
-    display: none;
+  &__slider { display: none; }
+  &__table  { display: block; }
+
+  @media (max-width: 767px) {
+    &__slider { display: block; }
+    &__table  { display: none; }
   }
 
-  &__table {
-    display: block;
-    margin-top: 16px;
-    background: $color-white;
-    border-radius: $radius;
+  &__slider {
+    padding: 16px 0;
     overflow: hidden;
   }
 
-  @media (max-width: ($bp-tablet - 1)) {
-    &__slider {
-      display: block;
-      padding: 16px 0;
-    }
-
-    &__table {
-      display: none;
-    }
-  }
-
   &__slide {
-    width: 260px;
+    width: 260px !important;
     min-height: 200px;
     background: $color-white;
     border: 1px solid $color-border;
     border-radius: 6px;
     padding: 16px;
+
     display: grid;
     row-gap: 4px;
   }
@@ -58,23 +49,28 @@
     border-radius: 16px;
     padding: 8px 12px;
     cursor: pointer;
+
     display: inline-flex;
     align-items: center;
     gap: 8px;
+
     text-transform: uppercase;
     font-weight: 700;
     font-size: 12px;
-    letter-spacing: 0.2px;
   }
 
   &__pagination {
     margin-top: 16px;
     display: flex;
     justify-content: center;
+  }
 
-    @media (min-width: $bp-tablet) {
-      display: none;
-    }
+  // таблица 768+
+  &__table {
+    margin-top: 16px;
+    background: $color-white;
+    border-radius: $radius;
+    overflow: hidden;
   }
 
   &__row {
@@ -113,20 +109,5 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: 12px;
-    letter-spacing: 0.2px;
-  }
-
-  &__note {
-    margin: 16px 0 0;
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  &__offer {
-    margin-top: 12px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 500;
   }
 }

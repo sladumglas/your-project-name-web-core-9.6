@@ -5,44 +5,39 @@
 
   &__slider {
     padding: 16px 0;
-    overflow: visible;
+    overflow: hidden;
   }
 
   &__card {
-    height: 160px;
-    padding: 16px;
     background: $color-white;
     border: 1px solid $color-border;
     border-radius: $radius;
+    padding: 16px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
 
     text-decoration: none;
     color: inherit;
 
     @media (max-width: 767px) {
-      width: 240px;
+      width: 240px !important;  // Figma mobile
+      height: 160px;            // Figma mobile
       flex: 0 0 auto;
     }
   }
 
-  &__card.swiper-slide {
-    display: flex;
-  }
-
   &__text {
     font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   &__arrow {
     width: 40px;
     height: 40px;
     align-self: flex-end;
-    flex: 0 0 auto;
-    display: block;
   }
 
   &__toggle {
@@ -51,47 +46,55 @@
     background: transparent;
     padding: 8px 0;
     cursor: pointer;
-    display: inline-flex;
+
+    display: none;
     align-items: center;
     gap: 8px;
-
-    @media (max-width: ($bp-tablet - 1)) {
-      display: none;
-    }
   }
 
   &__pagination {
     margin-top: 16px;
     display: flex;
     justify-content: center;
+  }
 
-    @media (min-width: $bp-tablet) {
+  @media (min-width: $bp-tablet) {
+    &__slider {
+      padding: 24px 0;
+      overflow: visible;
+    }
+
+    &__list {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+
+      max-height: 160px * 1 + 16px; // один ряд + gap (как в макете)
+      overflow: hidden;
+    }
+
+    &__list--expanded {
+      max-height: none;
+    }
+
+    &__card {
+      width: auto !important;
+      height: 160px;
+    }
+
+    &__pagination {
       display: none;
     }
-  }
-}
 
-@media (min-width: 768px) {
-  .devices__list {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-
-    max-height: 168px;
-    overflow: hidden;
+    &__toggle {
+      display: inline-flex;
+    }
   }
 
-  .devices__list--expanded {
-    max-height: none;
-  }
-
-  .devices__card {
-    width: auto !important;
-  }
-}
-
-@media (min-width: 1120px) {
-  .devices__list {
-    grid-template-columns: repeat(4, 1fr);
+  @media (min-width: $bp-desktop) {
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+      max-height: 160px * 1 + 16px;
+    }
   }
 }
