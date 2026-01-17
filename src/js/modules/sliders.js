@@ -29,6 +29,7 @@ function initSliders() {
 
   create('[data-slider="brands"]');
   create('[data-slider="devices"]');
+  create('[data-slider="prices"]');
 }
 
 module.exports = { initSliders };

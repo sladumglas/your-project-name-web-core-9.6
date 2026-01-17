@@ -20,6 +20,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 767px) {
+      width: 240px; 
+      flex: 0 0 auto;
+    }
+  }
+
+  &__arrow {
+    width: 40px;    
+    height: 40px;
+    flex: 0 0 auto;
+  }
+
+  &__logo {
+    max-width: 128px;  
+    height: auto;
   }
 
   &__toggle {

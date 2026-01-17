@@ -20,7 +20,6 @@ module.exports = {
 
    module: {
     rules: [
-      // ✅ CSS (Swiper и любые .css)
       {
         test: /\.css$/i,
         use: [
@@ -30,7 +29,6 @@ module.exports = {
         ],
       },
 
-      // ✅ SCSS
       {
         test: /\.scss$/i,
         use: [
