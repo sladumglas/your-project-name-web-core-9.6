@@ -60,7 +60,7 @@
     </div>
         </aside>
 
-    <div class="layout__overlay" data-menu-overlay hidden></div>
+    <div class="layout__overlay" data-menu-overlay></div>
     <div class="layout__content">
         <header class="header">
             <div class="container header__inner">
@@ -233,178 +233,214 @@
             </div>
           </section>
 
-<section class="prices">
-  <header class="section-head">
-    <div class="container">
-      <h2 class="section-head__title">Цены на услуги</h2>
-    </div>
-  </header>
+          <section class="devices">
+            <header class="section-head">
+              <div class="container">
+                <h2 class="section-head__title">Ремонт различных видов техники</h2>
+              </div>
+            </header>
 
-  <div class="container">
+            <div class="container">
+              <div class="devices__slider swiper" data-slider="devices">
+                <div class="swiper-wrapper devices__list">
+                  <a class="devices__card swiper-slide" href="#">
+                    <span class="devices__text">Ремонт ноутбуков</span>
+                    <img class="devices__arrow" src="./image/icon/go.svg" alt="" aria-hidden="true" />
+                  </a>
 
-    <!-- =====================
-         MOBILE (320–767): SWIPER
-    ====================== -->
-    <div class="prices__slider swiper" data-slider="prices">
-      <div class="swiper-wrapper prices__list">
+                  <a class="devices__card swiper-slide" href="#">
+                    <span class="devices__text">Ремонт планшетов</span>
+                    <img class="devices__arrow" src="./image/icon/go.svg" alt="" aria-hidden="true" />
+                  </a>
 
-        <!-- 1 -->
-        <div class="prices__card swiper-slide">
-          <p class="prices__label">Ремонтные услуги</p>
-          <p class="prices__value">Диагностика</p>
+                  <a class="devices__card swiper-slide" href="#">
+                    <span class="devices__text">Ремонт ПК</span>
+                    <img class="devices__arrow" src="./image/icon/go.svg" alt="" aria-hidden="true" />
+                  </a>
 
-          <p class="prices__label">Цена</p>
-          <p class="prices__value">Бесплатно</p>
+                  <a class="devices__card swiper-slide" href="#">
+                    <span class="devices__text">Ремонт мониторов</span>
+                    <img class="devices__arrow" src="./image/icon/go.svg" alt="" aria-hidden="true" />
+                  </a>
+                </div>
 
-          <p class="prices__label">Срок</p>
-          <p class="prices__value">30 мин</p>
+                <div class="swiper-pagination devices__pagination"></div>
+              </div>
 
-          <button class="prices__order" type="button">Заказать</button>
-        </div>
+              <button class="devices__toggle" type="button" data-devices-toggle>
+                <img class="devices__toggle-icon" src="./image/expand-down.svg" alt="" aria-hidden="true"/>
+                <span class="devices__toggle-text">Показать все</span>
+              </button>
+            </div>
+          </section>
 
-        <!-- 2 -->
-        <div class="prices__card swiper-slide">
-          <p class="prices__label">Ремонтные услуги</p>
-          <p class="prices__value">Замена дисплея</p>
+            <section class="prices">
+            <header class="section-head">
+              <div class="container">
+                <h2 class="section-head__title">Цены на услуги</h2>
+              </div>
+            </header>
 
-          <p class="prices__label">Цена</p>
-          <p class="prices__value">1000 ₽</p>
+            <div class="container">
+              <div class="prices__slider swiper" data-slider="prices">
+                <div class="swiper-wrapper prices__slides">
 
-          <p class="prices__label">Срок</p>
-          <p class="prices__value">30–120 мин</p>
+                  <div class="prices__slide swiper-slide">
+                    <p class="prices__label">Ремонтные услуги</p>
+                    <p class="prices__value">Диагностика</p>
 
-          <button class="prices__order" type="button">Заказать</button>
-        </div>
+                    <p class="prices__label">Цена</p>
+                    <p class="prices__value">Бесплатно</p>
 
-        <!-- 3 -->
-        <div class="prices__card swiper-slide">
-          <p class="prices__label">Ремонтные услуги</p>
-          <p class="prices__value">Замена полифонического динамика</p>
+                    <p class="prices__label">Срок</p>
+                    <p class="prices__value">30 мин</p>
 
-          <p class="prices__label">Цена</p>
-          <p class="prices__value">1000 ₽</p>
+                    <button class="prices__order-btn" type="button">
+                      <img src="./image/Group10.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
 
-          <p class="prices__label">Срок</p>
-          <p class="prices__value">30–120 мин</p>
+                  <div class="prices__slide swiper-slide">
+                    <p class="prices__label">Ремонтные услуги</p>
+                    <p class="prices__value">Замена дисплея</p>
 
-          <button class="prices__order" type="button">Заказать</button>
-        </div>
+                    <p class="prices__label">Цена</p>
+                    <p class="prices__value">1000 ₽</p>
 
-        <!-- 4 -->
-        <div class="prices__card swiper-slide">
-          <p class="prices__label">Ремонтные услуги</p>
-          <p class="prices__value">
-            Тестирование с выдачей технического заключения
-          </p>
+                    <p class="prices__label">Срок</p>
+                    <p class="prices__value">30–120 мин</p>
 
-          <p class="prices__label">Цена</p>
-          <p class="prices__value">1000 ₽</p>
+                    <button class="prices__order-btn" type="button">
+                      <img src="./image/Group10.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
 
-          <p class="prices__label">Срок</p>
-          <p class="prices__value">30–120 мин</p>
+                  <div class="prices__slide swiper-slide">
+                    <p class="prices__label">Ремонтные услуги</p>
+                    <p class="prices__value">Замена полифонического динамика</p>
 
-          <button class="prices__order" type="button">Заказать</button>
-        </div>
+                    <p class="prices__label">Цена</p>
+                    <p class="prices__value">1000 ₽</p>
 
-        <!-- 5 -->
-        <div class="prices__card swiper-slide">
-          <p class="prices__label">Ремонтные услуги</p>
-          <p class="prices__value">Замена программного обеспечения</p>
+                    <p class="prices__label">Срок</p>
+                    <p class="prices__value">30–120 мин</p>
 
-          <p class="prices__label">Цена</p>
-          <p class="prices__value">1000 ₽</p>
+                    <button class="prices__order-btn" type="button">
+                      <img src="./image/Group10.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
 
-          <p class="prices__label">Срок</p>
-          <p class="prices__value">30–120 мин</p>
+                  <div class="prices__slide swiper-slide">
+                    <p class="prices__label">Ремонтные услуги</p>
+                    <p class="prices__value">Тестирование с выдачей технического заключения</p>
 
-          <button class="prices__order" type="button">Заказать</button>
-        </div>
+                    <p class="prices__label">Цена</p>
+                    <p class="prices__value">1000 ₽</p>
 
-      </div>
+                    <p class="prices__label">Срок</p>
+                    <p class="prices__value">30–120 мин</p>
 
-      <div class="swiper-pagination prices__pagination"></div>
-    </div>
+                    <button class="prices__order-btn" type="button">
+                      <img src="./image/Group10.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
 
-    <!-- =====================
-         TABLET / DESKTOP (768+): LIST
-    ====================== -->
-    <div class="prices__table" role="table" aria-label="Прайс-лист">
-      <div class="prices__row prices__row--head">
-        <div class="prices__cell">Ремонтные услуги</div>
-        <div class="prices__cell">Цена</div>
-        <div class="prices__cell">Срок</div>
-        <div class="prices__cell"></div>
-      </div>
+                  <div class="prices__slide swiper-slide">
+                    <p class="prices__label">Ремонтные услуги</p>
+                    <p class="prices__value">Замена программного обеспечения</p>
 
-      <div class="prices__row">
-        <div class="prices__cell">Диагностика</div>
-        <div class="prices__cell">Бесплатно</div>
-        <div class="prices__cell">30 мин</div>
-        <div class="prices__cell prices__cell--action">
-          <button class="prices__order">
-            <img src="./image/Group10.svg" alt="" />
-          </button>
-        </div>
-      </div>
+                    <p class="prices__label">Цена</p>
+                    <p class="prices__value">1000 ₽</p>
 
-      <div class="prices__row">
-        <div class="prices__cell">Замена дисплея</div>
-        <div class="prices__cell">1000 ₽</div>
-        <div class="prices__cell">30–120 мин</div>
-        <div class="prices__cell prices__cell--action">
-          <button class="prices__order">
-            <img src="./image/Group10.svg" alt="" />
-          </button>
-        </div>
-      </div>
+                    <p class="prices__label">Срок</p>
+                    <p class="prices__value">30–120 мин</p>
 
-      <div class="prices__row">
-        <div class="prices__cell">Замена полифонического динамика</div>
-        <div class="prices__cell">1000 ₽</div>
-        <div class="prices__cell">30–120 мин</div>
-        <div class="prices__cell prices__cell--action">
-          <button class="prices__order">
-            <img src="./image/Group10.svg" alt="" />
-          </button>
-        </div>
-      </div>
+                    <button class="prices__order-btn" type="button">
+                      <img src="./image/Group10.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
 
-      <div class="prices__row">
-        <div class="prices__cell">
-          Тестирование с выдачей технического заключения
-        </div>
-        <div class="prices__cell">1000 ₽</div>
-        <div class="prices__cell">30–120 мин</div>
-        <div class="prices__cell prices__cell--action">
-          <button class="prices__order">
-            <img src="./image/Group10.svg" alt="" />
-          </button>
-        </div>
-      </div>
+                </div>
 
-      <div class="prices__row">
-        <div class="prices__cell">Замена программного обеспечения</div>
-        <div class="prices__cell">1000 ₽</div>
-        <div class="prices__cell">30–120 мин</div>
-        <div class="prices__cell prices__cell--action">
-          <button class="prices__order">
-            <img src="./image/Group10.svg" alt="" />
-          </button>
-        </div>
-      </div>
-    </div>
+                <div class="swiper-pagination prices__pagination"></div>
+              </div>
 
-    <p class="prices__note">
-      Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу.
-    </p>
+              <div class="prices__table" role="table" aria-label="Прайс-лист">
+                <div class="prices__row prices__row--head" role="row">
+                  <div class="prices__cell prices__cell--service" role="columnheader">Ремонтные услуги</div>
+                  <div class="prices__cell prices__cell--price" role="columnheader">Цена</div>
+                  <div class="prices__cell prices__cell--time" role="columnheader">Срок</div>
+                  <div class="prices__cell prices__cell--action" role="columnheader"></div>
+                </div>
 
-    <a class="prices__offer" href="#">
-      Получить коммерческое предложение
-      <img src="./image/more.png" alt="" />
-    </a>
+                <div class="prices__row" role="row">
+                  <div class="prices__cell prices__cell--service" role="cell">Диагностика</div>
+                  <div class="prices__cell prices__cell--price" role="cell">Бесплатно</div>
+                  <div class="prices__cell prices__cell--time" role="cell">30 мин</div>
+                  <div class="prices__cell prices__cell--action" role="cell">
+                    <button class="prices__order" type="button">
+                      <img class="prices__order-icon" src="./image/Group10.svg" alt="" aria-hidden="true"/>
+                    </button>
+                  </div>
+                </div>
 
-  </div>
-</section>
+                <div class="prices__row" role="row">
+                  <div class="prices__cell prices__cell--service" role="cell">Замена дисплея</div>
+                  <div class="prices__cell prices__cell--price" role="cell">1000 ₽</div>
+                  <div class="prices__cell prices__cell--time" role="cell">30-120 мин</div>
+                  <div class="prices__cell prices__cell--action" role="cell">
+                    <button class="prices__order" type="button">
+                      <img class="prices__order-icon" src="./image/Group10.svg" alt="" aria-hidden="true"/>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="prices__row" role="row">
+                  <div class="prices__cell prices__cell--service" role="cell">Замена полифонического динамика</div>
+                  <div class="prices__cell prices__cell--price" role="cell">1000 ₽</div>
+                  <div class="prices__cell prices__cell--time" role="cell">30-120 мин</div>
+                  <div class="prices__cell prices__cell--action" role="cell">
+                    <button class="prices__order" type="button">
+                      <img class="prices__order-icon" src="./image/Group10.svg" alt="" aria-hidden="true"/>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="prices__row" role="row">
+                  <div class="prices__cell prices__cell--service" role="cell">Тестирование с выдачей технического заключения</div>
+                  <div class="prices__cell prices__cell--price" role="cell">1000 ₽</div>
+                  <div class="prices__cell prices__cell--time" role="cell">30-120 мин</div>
+                  <div class="prices__cell prices__cell--action" role="cell">
+                    <button class="prices__order" type="button">
+                      <img class="prices__order-icon" src="./image/Group10.svg" alt="" aria-hidden="true"/>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="prices__row" role="row">
+                  <div class="prices__cell prices__cell--service" role="cell">Замена программного обеспечения</div>
+                  <div class="prices__cell prices__cell--price" role="cell">1000 ₽</div>
+                  <div class="prices__cell prices__cell--time" role="cell">30-120 мин</div>
+                  <div class="prices__cell prices__cell--action" role="cell">
+                    <button class="prices__order" type="button">
+                      <img class="prices__order-icon" src="./image/Group10.svg" alt="" aria-hidden="true"/>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+              <p class="prices__note">
+                Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для
+                получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
+              </p>
+
+              <a class="prices__offer" href="#">
+                Получить коммерческое предложение
+                <img class="prices__offer-icon" src="./image/more.png" alt="" aria-hidden="true"/>
+              </a>
+            </div>
+          </section>
         </main>
 
         <footer class="footer">

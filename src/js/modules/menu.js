@@ -15,8 +15,6 @@ function initMenu() {
     page.classList.add("page--menu-open", "page--locked");
 
     btnOpen.setAttribute("aria-expanded", "true");
-
-    overlay.hidden = false;
   };
 
   const closeMenu = () => {

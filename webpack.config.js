@@ -18,29 +18,36 @@ module.exports = {
     hot: true,
   },
 
-   module: {
+  module: {
     rules: [
       {
         test: /\.css$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-        ],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
 
       {
         test: /\.scss$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+          loader: MiniCssExtractPlugin.loader,
+          options: { publicPath: "../"},
+          },
           "css-loader",
           "postcss-loader",
           "sass-loader",
         ],
       },
+
+      {
+        test: /\.(woff2?|ttf|eot|otf)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "font/[name][ext]",
+        },
+      },
     ],
   },
-  
+
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
@@ -50,10 +57,7 @@ module.exports = {
       filename: "css/main.css",
     }),
     new CopyWebpackPlugin({
-      patterns: [
-        { from: "src/image", to: "image" },
-        { from: "src/font", to: "font" },
-      ],
+      patterns: [{ from: "src/image", to: "image" }],
     }),
   ],
 };

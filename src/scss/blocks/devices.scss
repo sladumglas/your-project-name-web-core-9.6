@@ -5,6 +5,7 @@
 
   &__slider {
     padding: 16px 0;
+    overflow: visible;
   }
 
   &__card {
@@ -12,36 +13,36 @@
     padding: 16px;
     background: $color-white;
     border: 1px solid $color-border;
-    border-radius: 6px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    border-radius: $radius;
 
-    @media (max-width: ($bp-tablet - 1)) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    text-decoration: none;
+    color: inherit;
+
+    @media (max-width: 767px) {
       width: 240px;
       flex: 0 0 auto;
     }
   }
 
+  &__card.swiper-slide {
+    display: flex;
+  }
+
   &__text {
     font-weight: 500;
-    max-width: 140px;
   }
 
   &__arrow {
     width: 40px;
     height: 40px;
+    align-self: flex-end;
     flex: 0 0 auto;
-  }
-
-  &__pagination {
-    margin-top: 16px;
-    display: flex;
-    justify-content: center;
-
-    @media (min-width: $bp-tablet) {
-      display: none;
-    }
+    display: block;
   }
 
   &__toggle {
@@ -57,5 +58,40 @@
     @media (max-width: ($bp-tablet - 1)) {
       display: none;
     }
+  }
+
+  &__pagination {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $bp-tablet) {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .devices__list {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    max-height: 168px;
+    overflow: hidden;
+  }
+
+  .devices__list--expanded {
+    max-height: none;
+  }
+
+  .devices__card {
+    width: auto !important;
+  }
+}
+
+@media (min-width: 1120px) {
+  .devices__list {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

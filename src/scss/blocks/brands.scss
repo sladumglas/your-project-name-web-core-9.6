@@ -3,12 +3,9 @@
 .brands {
   padding-bottom: 24px;
 
-  &__list {
-    display: flex;
-  }
-
   &__slider {
     padding: 16px 0;
+    overflow: visible;
   }
 
   &__card {
@@ -17,25 +14,39 @@
     background: $color-white;
     border: 1px solid $color-border;
     border-radius: $radius;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
+
+    text-decoration: none;
+    color: inherit;
 
     @media (max-width: 767px) {
-      width: 240px; 
+      width: 240px;
       flex: 0 0 auto;
     }
   }
 
-  &__arrow {
-    width: 40px;    
-    height: 40px;
-    flex: 0 0 auto;
+  &__card.swiper-slide {
+    display: flex;
   }
 
   &__logo {
-    max-width: 128px;  
+    display: block;
+    max-width: 128px;
+    max-height: 40px;
     height: auto;
+    width: auto;
+    object-fit: contain;
+  }
+
+  &__arrow {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    display: block;
   }
 
   &__toggle {
@@ -57,7 +68,7 @@
 
   @media (min-width: $bp-tablet) {
     &__slider {
-      overflow: visible;
+      padding: 24px 0;
     }
 
     &__list {
@@ -67,10 +78,10 @@
 
       max-height: 168px;
       overflow: hidden;
+    }
 
-      &--expanded {
-        max-height: none;
-      }
+    &__list--expanded {
+      max-height: none;
     }
 
     &__card {

@@ -6,27 +6,6 @@
     padding-top: 24px;
   }
 
-.services {
-  &__tabs {
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;       
-    -ms-overflow-style: none; 
-    white-space: nowrap;
-  }
-
-  &__text--second {
-    @media (max-width: 767px) {
-      display: none;
-    }
-  }
-
-  &__tabs::-webkit-scrollbar {
-    display: none;            
-  }
-}
-
   &__bar {
     position: absolute;
     left: -$container-padding-m;

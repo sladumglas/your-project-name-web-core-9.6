@@ -26,7 +26,6 @@ function initOne({ sectionSelector, listSelector, buttonSelector, expandedClass 
   const icon = btn.querySelector("img");
   const textEl = btn.querySelector("span");
 
-  // На мобиле кнопка обычно скрыта стилями, но на всякий случай:
   if (window.innerWidth < 768) return;
 
   btn.addEventListener("click", () => {
