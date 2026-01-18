@@ -55,4 +55,8 @@
       margin-left: 0;
     }
   }
+
+  @media (min-width: $bp-desktop) {
+    display: none;
+  }
 }

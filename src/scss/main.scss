@@ -2,20 +2,20 @@
 @use "./fonts";
 @use "./base";
 
-// утилиты/общие
+// вставки
 @use "./blocks/container";
 @use "./blocks/icon-btn";
 
-// каркас/обвязка страницы
+// настройки
 @use "./blocks/layout";
 @use "./blocks/header";
 @use "./blocks/side-menu";
 
-// общие секционные элементы
+// настройки
 @use "./blocks/section-head";
 @use "./blocks/footer";
 
-// контентные блоки
+// блоки
 @use "./blocks/services";
 @use "./blocks/brands";
 @use "./blocks/devices";
