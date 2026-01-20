@@ -6,9 +6,11 @@ require("../scss/main.scss");
 const { initMenu } = require("./modules/menu");
 const { initSliders } = require("./modules/sliders");
 const { initShowAll } = require("./modules/show-all");
+const { initServicesMore } = require("./modules/services-more");
 
 window.addEventListener("DOMContentLoaded", () => {
   initMenu();
   initSliders();
   initShowAll();
+  initServicesMore();
 });

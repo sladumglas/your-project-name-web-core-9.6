@@ -104,25 +104,25 @@
     margin: 0 0 16px;
     font-size: 14px;
     line-height: 18px;
+  }
 
-    &--second {
-      display: none;
+  &__text--second {
+    display: none;
 
-      @media (min-width: $bp-tablet) {
-        display: block;
-      }
-
-      @media (min-width: $bp-desktop) {
-        display: none;
-      }
+    @media (min-width: $bp-tablet) {
+      display: block;
     }
 
-    &--desktop {
+    @media (min-width: $bp-desktop) {
       display: none;
+    }
+  }
 
-      @media (min-width: $bp-desktop) {
-        display: block;
-      }
+  &__text--desktop {
+    display: none;
+
+    @media (min-width: $bp-desktop) {
+      display: block;
     }
   }
 
@@ -135,6 +135,39 @@
     align-items: center;
     gap: 8px;
     font-weight: 500;
+  }
+
+  &__more-icon {
+    transition: transform 0.2s ease;
+  }
+
+  &.services--expanded {
+    /* 3 часть текста */
+    .services__text--desktop {
+      display: block;
+    }
+
+    /* меняем второй на третий */
+    @media (min-width: $bp-tablet) and (max-width: ($bp-desktop - 1)) {
+      .services__text--second {
+        display: none;
+      }
+
+      .services__text--desktop {
+        display: block;
+      }
+    }
+
+    .services__more-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  /* ПК скрываем кнопку */
+  @media (min-width: $bp-desktop) {
+    &__more {
+      display: none;
+    }
   }
 
   &__image {
